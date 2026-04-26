@@ -155,11 +155,35 @@ def write_readme(records: list[dict[str, str]]) -> None:
   <img alt="Files" src="https://img.shields.io/badge/Files-{total_files}-16a34a">
   <img alt="Size" src="https://img.shields.io/badge/Package-{mb:.1f}MB-f97316">
   <img alt="For" src="https://img.shields.io/badge/For-Computer%20Science%20Students-7c3aed">
+  <a href="https://github.com/bighardperson/computer-science-skills-collection/releases/latest"><img alt="Download" src="https://img.shields.io/badge/Download-Latest%20Release-0f766e"></a>
+  <a href="https://github.com/bighardperson/computer-science-skills-collection/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/bighardperson/computer-science-skills-collection?style=social"></a>
 </p>
 
 这是一个面向计算机专业学生、开发者和 AI Agent 使用者的 Skills 大合集。它整理了本机 Claude Code / OpenClaw 风格的 skill 库，覆盖编程语言、前后端、移动端、云服务、AI Agent、浏览器自动化、数据分析、科研论文、文档办公、安全审计和效率工作流等方向。
 
 这个仓库的目标不是把资料堆在一起，而是把可复用的能力沉淀成一套可以浏览、复制、二次开发的知识库：你可以把它当成技能提示词库、AI Agent 工作流模板库，也可以把它当成计算机专业实践方向的路线图。
+
+## 一键下载
+
+如果你只是想先把全部 skills 拉到本地，推荐直接下载 Release：
+
+```bash
+curl -L -o computer-science-skills-collection.zip \
+  https://github.com/bighardperson/computer-science-skills-collection/releases/latest/download/computer-science-skills-collection.zip
+```
+
+如果你想持续同步更新，推荐 clone 仓库：
+
+```bash
+git clone https://github.com/bighardperson/computer-science-skills-collection.git
+cd computer-science-skills-collection
+```
+
+想快速装到本机 skills 目录，可以运行：
+
+```bash
+bash scripts/install.sh ~/.agents/skills
+```
 
 ## 为什么值得收藏
 
@@ -176,6 +200,8 @@ def write_readme(records: list[dict[str, str]]) -> None:
 | [完整目录 CATALOG](CATALOG.md) | 全部 skills 的索引表，适合检索和浏览 |
 | [学习路线](docs/LEARNING_ROADMAP.md) | 按计算机专业成长路径组织的使用路线 |
 | [使用指南](docs/USAGE.md) | 如何复制、改造、安装和维护这些 skills |
+| [传播文案](docs/SHARE_COPY.md) | 发朋友圈、社群、README 推荐时可直接使用 |
+| [贡献指南](CONTRIBUTING.md) | 如何补充、优化和提交新的 skill |
 | [公开说明](LICENSE_NOTICE.md) | 关于公开整理、敏感信息排除和来源尊重的说明 |
 
 ## 分类地图
@@ -253,6 +279,15 @@ mindmap
 ## 给 Star 的理由
 
 如果你觉得这个仓库帮你节省了整理资料、写提示词、搭工作流的时间，欢迎点一个 Star。后续可以继续把它扩展成更完整的计算机专业技能地图：每个方向都有路线、示例、模板、工具链和实践项目。
+
+## Star History
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=bighardperson/computer-science-skills-collection&type=Date&theme=dark">
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=bighardperson/computer-science-skills-collection&type=Date">
+  </picture>
+</p>
 """
     (ROOT / "README.md").write_text(content, encoding="utf-8")
 
